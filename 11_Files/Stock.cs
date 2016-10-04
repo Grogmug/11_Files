@@ -19,7 +19,7 @@
             get;
             set;
         }
-        public int Id
+        public long Id
         {
             get;
             set;

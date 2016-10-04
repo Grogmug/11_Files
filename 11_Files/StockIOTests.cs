@@ -52,24 +52,24 @@ namespace _11_Files
         }
 
 
-        //    [TestMethod]
-        //    public void CanWriteToFile()
-        //    {
-        //        FileInfo output = new FileInfo("stockout.txt");
-        //        try
-        //        {
-        //            StockIO io = new StockIO();
-        //            io.WriteStock(output, hp);
-        //            Assert.IsTrue(output.Exists);
-        //            Stock loaded = io.ReadStock(output);
-        //            Assert.AreEqual(hp, loaded);
-        //        }
-        //        finally
-        //        {
-        ////            output.Delete();
-        ////        }
-        ////    }
+        [TestMethod]
+        public void CanWriteToFile()
+        {
+            FileInfo output = new FileInfo("stockout.txt");
+            try
+            {
+                StockIO io = new StockIO();
+                io.WriteStock(output, hp);
+                Assert.IsTrue(output.Exists);
+                Stock loaded = io.ReadStock(output);
+                Assert.AreEqual(hp, loaded);
+            }
+            finally
+            {
+                output.Delete();
+            }
+        }
 
 
     }
-}
+        }
